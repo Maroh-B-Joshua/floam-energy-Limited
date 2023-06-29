@@ -1,0 +1,549 @@
+/*showcase for the home page*/
+
+
+.showcase-2{
+  display: none;
+}
+
+/* the showcase of background image and blur effect*/
+
+
+.showcase::before {
+    height: 100vh;
+    content: '';
+    width: 100%;
+    background-image: url("Fel-Gallery/fel1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+    display: block;
+    filter: blur(10px);
+    -webkit-filter:blur(10px);
+    transition: all 1000ms;
+}
+
+.showcase:hover::before {
+    filter: blur(0px);
+    -webkit-filter:blur(0px);
+}
+
+.showcase:hover .contents{
+filter:blur(2px);
+-webkit-filter:blur(2px);
+}
+
+.contents{
+position: absolute;
+z-index: 1;
+top: 45%;
+left: 50%;
+margin-top: 105px;
+margin-left: -145px;
+width: 300px;
+height: 350px;
+text-align: center;
+transition: all 1000ms;
+}
+
+.contents .logo{
+height: 180px;
+width: 180px;
+}
+
+.contents .title{
+font-size:2.2rem ;
+margin-top: 1rem;
+color: #eee;
+font-family: 'Abril Fatface', cursive;
+}
+
+.contents .text {
+line-height: 1.0;
+margin-top:1rem;
+color: #eee;
+}
+
+.text > p {
+  font-size:1.2rem;
+}
+
+
+ @media (max-width:560px){
+
+
+.showcase{
+  display: none;
+}
+
+
+
+.container {
+  max-width: 960px;/*ur gonna probably change this*/
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+
+.showcase-2{
+  display: block;
+  background-color:var(--primary-color) ;
+  color:#fff;
+  height: 100vh;
+  position: relative;
+
+}
+
+.showcase-2:before{
+  content:'';
+  background: url('Fel-Gallery/fel1.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
+
+}
+
+.showcase-2 .showcase-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+
+.showcase-2 h1 {
+ font-size: 1.9rem;
+}
+ 
+
+.showcase-2 p {
+ font-size: 1.2rem;
+
+}
+
+
+}
+
+
+
+/*end of the showcase for the home page*/
+
+
+
+
+
+
+
+
+
+/*showcase for the about page*/
+
+.abt-showcase2{
+  display: none;
+}
+
+.abt-showcase{
+  display: block;
+  height: 63.8vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/about2.jpg') no-repeat center center/cover;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0066ff 3px solid; 
+}
+
+.abt-showcase::before{
+  content: '';
+  position: absolute;
+  background:var(--abt-primary-color) ;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.abt-content{
+float: left;
+position: relative;
+top: 0 ;
+left: 0;
+vertical-align: middle;
+padding: 1rem 3rem;
+margin: 1rem 4rem;
+
+}
+
+.abt-title{
+  /*position: relative;
+  top: 50%;
+  left: 50%;*/
+  margin-top: 20vh;
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  position: relative;
+  top: 0 ;
+  left: 0;
+  vertical-align: middle;
+
+}
+
+.abt-title > h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding:1rem 4.0rem ;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width:560px){
+
+
+.abt-showcase{
+  display: none;
+}
+
+.abt-showcase2{
+  display: block;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/about2.jpg') no-repeat center center/cover;
+  background-attachment: scroll;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0752c2 4px solid; 
+}
+
+.abt-showcase2::before{
+  content: '';
+  position: absolute;
+  background:#0066ff80;
+  top: 0;
+  left: 0;
+  width:50%;
+  height: 100%;
+}
+
+.abt-content2{
+position: relative;
+top: 20vh ;
+left: 0;
+padding: 1rem 6rem;
+
+}
+
+.abt-title2{
+  /*position: relative;
+  top: 50%;
+  left: 50%;*/
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  position: relative;
+  top: 0 ;
+  left: 0;
+  vertical-align: middle;
+
+}
+
+.abt-title2 > h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+}
+
+
+/*end of the about page showcase*/
+
+
+
+
+
+
+
+/*showcase for the procurement page*/
+.pcr-showcase2{
+  display: none;
+}
+
+.pcr-showcase{
+  display: block;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/procure1.jpg') no-repeat center center/cover;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0066ff 3px solid; 
+}
+
+.pcr-showcase::before{
+  content: '';
+  position: absolute;
+  background:var(--abt-primary-color) ;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.pcr-content{
+float: left;
+position: relative;
+top: 0 ;
+left: 0;
+vertical-align: middle;
+padding: 1rem 9rem;
+margin: 1rem 4rem;
+
+}
+
+
+.pcr-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  vertical-align: middle;
+  padding: 1rem 1rem;
+  margin-top:15vh;
+}
+
+.pcr-title > h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding:1rem 4.0rem ;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width:560px){
+
+
+.pcr-showcase{
+  display: none;
+}
+
+.pcr-showcase2{
+  display: block;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/procure1.jpg') no-repeat center center/cover;
+  background-attachment: scroll;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0752c2 4px solid; 
+}
+
+.pcr-showcase2::before{
+  content: '';
+  position: absolute;
+  background:#0066ff80;
+  top: 0;
+  left: 0;
+  width:50%;
+  height: 100%;
+}
+
+.pcr-content2{
+position: relative;
+top: 20vh ;
+left: 0;
+padding: 1rem 6rem;
+
+}
+
+.pcr-title2{
+  /*position: relative;
+  top: 50%;
+  left: 50%;*/
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  position: relative;
+  top: 0 ;
+  left: 0;
+  vertical-align: middle;
+
+}
+
+.pcr-title2 > h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+}
+
+
+
+
+
+
+
+/*end for the procurement page*/
+
+
+
+
+
+
+/* begining of styling for corporate info page*/
+
+
+
+.corp-showcase2{
+  display: none;
+}
+
+.corp-showcase{
+  display: block;
+  height: 70vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/cpi.jpg') no-repeat center center/cover;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0066ff 3px solid; 
+}
+
+.corp-showcase::before{
+  content: '';
+  position: absolute;
+  background:var(--abt-primary-color) ;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.corp-content{
+float: left;
+position: relative;
+top: 0 ;
+left: 0;
+vertical-align: middle;
+padding: 1rem 9rem;
+margin: 1rem 4rem;
+
+}
+
+
+.corp-title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  vertical-align: middle;
+  padding: 1rem 1rem;
+  margin-top:15vh;
+}
+
+.corp-title > h1 {
+  font-size: 3rem;
+  color: #fff;
+  padding:1rem 4.0rem ;
+  text-transform: uppercase;
+}
+
+
+
+@media (max-width:560px){
+
+
+.corp-showcase{
+  display: none;
+}
+
+.corp-showcase2{
+  display: block;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/cpi.jpg') no-repeat center center/cover;
+  background-attachment: scroll;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #0752c2 4px solid; 
+}
+
+.corp-showcase2::before{
+  content: '';
+  position: absolute;
+  background:#0066ff80;
+  top: 0;
+  left: 0;
+  width:50%;
+  height: 100%;
+}
+
+.corp-content2{
+position: relative;
+top: 20vh ;
+left: 0;
+padding: 1rem 6rem;
+
+}
+
+.corp-title2{
+  /*position: relative;
+  top: 50%;
+  left: 50%;*/
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  position: relative;
+  top: 0 ;
+  left: 0;
+  vertical-align: middle;
+
+}
+
+.corp-title2 > h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* end of styling for corporate info page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

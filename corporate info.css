@@ -1,0 +1,163 @@
+*{ 
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --cpi-primary-color:#3080e79c;
+  --abt-overlay-color:#9e182a85;
+}
+
+
+.cpi-showcase{
+  display: block;
+  height: 30vh;
+  width: 100%;
+  position: relative;
+  background: url('Fel-Gallery/cpi.jpg') no-repeat center center/cover;
+  color:#fff;
+  z-index: -1;
+  border-bottom: #9e182a 3px solid; 
+}
+
+.cpi-showcase::before{
+  content: '';
+  position: absolute;
+  background:var(--abt-overlay-color) ;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.cpi-content{
+float: left;
+position: relative;
+  top: 0 ;
+  left: 5%;
+}
+
+.cpi-title{
+  /*position: relative;
+  top: 50%;
+  left: 50%;*/
+  margin-top: 10vh;
+  border-top:#ddd 5px solid ;
+  border-bottom:#ddd 5px solid ;
+  padding: 1rem 5rem;
+}
+
+.cpi-title > h1 {
+  font-size: 2rem;
+  color: #fff;
+  padding:8px 2rem ;
+}
+
+.corp-overview{
+  background-color: var(--background-color);
+  z-index: -1;
+  height: 100vh;
+}
+
+.corp-overview::before{
+  height: 100vh;
+  content: '';
+  width: 100%;
+  background-color:var('--background-color');
+  background-image: url("Fel-Gallery/cpib.jpg");
+  background-size:cover;
+  background-repeat: no-repeat; 
+  background-position: center;
+  display: block;
+  z-index: 1;
+  position: absolute;
+}
+
+
+.scroll-bar{
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1em 4em;
+  max-width: 500px !important;
+  height:100vh !important;
+  overflow: auto;
+  margin: auto;
+  background-color: rgba(48, 43, 43, 0.808);
+  z-index: 1 !important;
+}
+ 
+
+.corp-info > h1{
+  text-align: center;
+  font-size: 1.6rem;
+  color: #0066ff;
+  margin: 1rem 0;
+  text-transform:uppercase;
+}
+
+.corp-info > h1 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #0066ff;
+  margin: 1rem 0;
+  text-transform:uppercase;
+}
+
+.corp-info > h1::after{
+  content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid rgb(145, 145, 145); /* This creates the border. Replace black with whatever color you want. */
+}
+
+
+.mng-team > h1::after{
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 50%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid rgb(145, 145, 145); /* This creates the border. Replace black with whatever color you want. */
+}
+
+
+.corp-info > p {
+  text-align: center;
+  color: #ddd;
+  line-height: 1.6rem;
+  font-size:1.2rem;
+}
+
+.company-profile2 > p {
+  text-align: center;
+  color: #ddd;
+  line-height: 1.6rem;
+  font-size:1.2rem;
+}
+
+
+@media (max-width:560px){
+
+
+  
+.scroll-bar{
+
+  height: 96vh !important;
+}
+
+
+
+
+}
+
+
+
+
+
+
+

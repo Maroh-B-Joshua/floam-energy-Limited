@@ -1,0 +1,244 @@
+@import "main.css";
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: transparent; /* Set a background color */
+  color: #b6b4b4; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 50%; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  animation: pulse 2s infinite;
+
+}
+
+
+/*back to up button animation*/
+@keyframes pulse {
+ /* 0%{
+    box-shadow: 0 0 0 0 #9e182a;
+  }*/
+30%{
+    box-shadow: 0 0 0 0.5rem #0066ff9a;
+  }/*
+  85%{
+    box-shadow: 0 0 0 0 #ff416d48;
+  }*/
+}
+/*End up button animation*/
+
+#myBtn:hover {
+  background: var(--button-color) ;/* Add a background on hover */
+}
+
+
+/*.img-gal-btn{
+position: relative;
+width: 50%;
+text-align: center;
+ }*/
+
+.gal-btn {
+  padding:4px 20px;
+  background-color: transparent;
+  font-weight:600;
+  color:#0066ff;
+  border:#0066ff 1.5px solid;
+  text-align: center;
+  position: relative;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+.gal-btn:hover{
+  /*border: none;*/
+  background-color: #0066ff;
+  color:#fff;
+  animation: btn 0.8s 1;
+
+  transition:all 700ms ease-out;
+}
+
+
+@keyframes btn{
+ 0%{ box-shadow:0 0 0 0 transparent;}
+
+ 50%{box-shadow: 0 0 0 9px #0066ff98;}
+
+85%{box-shadow:0 0 0 0 transparent;}
+
+100%{}
+}
+/*styling for q & a with accordion*/
+
+.goals{
+  padding: 1rem 2rem; 
+  background-color:var(--background-color);
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+
+.goals > div{
+  border-radius:25px;
+}
+ 
+.goalz{
+  border-radius:25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+}
+
+.question{
+  color:#333;
+  border-right: #0066ff 2px solid ;
+  background-image: linear-gradient(
+                            53deg,
+                            white,
+                            lightgrey,
+                            rgb(158, 158, 158),
+                            ghostwhite
+                            );
+  padding: 0.7rem 1rem;
+  margin: 0;
+  font-size: 1.2rem;
+  font-family: 'Baskervville', serif;
+  border-top-left-radius:5px ;
+  border-bottom-left-radius:5px ;
+
+}
+
+.question > h1 {
+  font-size:2rem;
+  color: #0066ff;
+}
+
+.question > p{
+  padding: 12px 1.5rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+.acordions{
+  background-color:var(--background-color);
+  /*padding: 1rem 4rem;*/
+  border-top-right-radius:5px ;
+  border-bottom-right-radius:5px ;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color:#333;
+  color: #ddd;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 1rem 6rem;
+  width: 100%;
+  height:6rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  border-top-right-radius:5px ;
+  border-bottom-right-radius:5px ;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+  color:#333;
+}
+
+/* Style the accordion panel. Note: hidden by default *
+.panel {
+  position: relative;
+  top: 0;
+  left: 0;
+  right:0;
+  padding: 0 18px;
+  color: #444;
+  background-color: rgb(219, 219, 219);
+  display: none;
+  overflow: hidden;
+}*/
+
+.panel > p {
+  padding: 12px 1.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #111;
+}
+
+.accordion:after {
+   content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #ddd;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+  color:#333;
+}
+
+
+/* for an animated accordion*/
+ .panel {
+      padding: 0 18px;
+      background-image: repeating-linear-gradient( 45deg,
+                                                   ghostwhite 1rem,
+                                                   lightgrey 1.2rem,
+                                                   #bbb 0.6rem
+      );
+      position: relative;
+      border-top-right-radius:5px ;
+      border-bottom-right-radius:5px ;
+      top: 0;
+      left: 0;
+      right:0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 600ms ease-out;
+      }
+
+
+
+   @media (max-width:560px){
+
+    .goalz{
+  grid-template-columns:  1fr;
+}
+
+.question{
+  border: none;
+  border-bottom: #0066ff 2px solid;
+}
+
+.accordion{
+  /*width: 50%;*/
+  border-radius:5px;
+}
+.panel{
+  padding:0 18px ;
+  height:30vh;
+  overflow: auto;
+  border-radius:5px;
+}
+
+.panel > p {
+  font-size: 1.2rem;
+  right:0;
+
+}
+
+}
